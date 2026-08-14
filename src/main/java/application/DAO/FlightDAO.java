@@ -186,7 +186,7 @@ public class FlightDAO {
         List<Flight> flights = new ArrayList<>();
         try {
             //Write SQL logic here
-            String sql = "SELECT  * FROM flights WHERE departure_city =? AND arrival_city =?";
+            String sql = "SELECT  * FROM flight WHERE departure_city =? AND arrival_city =?";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, departure_city);
             preparedStatement.setString(2, arrival_city);
